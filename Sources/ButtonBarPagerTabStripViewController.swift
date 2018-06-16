@@ -330,7 +330,9 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
         cell.contentView.backgroundColor = settings.style.buttonBarItemBackgroundColor ?? cell.contentView.backgroundColor
         cell.backgroundColor = settings.style.buttonBarItemBackgroundColor ?? cell.backgroundColor
         if let image = indicatorInfo.image {
+            cell.imageView.contentMode = .scaleAspectFit
             cell.imageView.image = image
+            
         }
         if let highlightedImage = indicatorInfo.highlightedImage {
             cell.imageView.highlightedImage = highlightedImage
