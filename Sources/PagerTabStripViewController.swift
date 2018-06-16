@@ -57,6 +57,10 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
     open weak var datasource: PagerTabStripDataSource?
 
     open var pagerBehaviour = PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
+    
+    open func XLPagerStripDefaultIndex(at index: Int) {
+        currentIndex = index
+    }
 
     open private(set) var viewControllers = [UIViewController]()
     open private(set) var currentIndex = 0
